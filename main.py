@@ -103,19 +103,19 @@ if __name__ == '__main__':
     resultado = somar(5, 4)
     print(f'O resultado da soma é: {resultado}')
 
-    # resultado = subtrair(5, 3)
-    # print(f'O resultado da subtraçao é: {resultado}')
-    #
-    #
-    # resultado = multiplicar(2, 4)
-    # print(f'O resultado da multiplicaçao é: {resultado}')
-    #
-    # resultado = dividir(9, 3)
-    # print(f'O resultado da divisao é: {resultado}')
-    #
-    #
-    #
-    #
+    resultado = subtrair(5, 3)
+    print(f'O resultado da subtraçao é: {resultado}')
+
+
+    resultado = multiplicar(2, 4)
+    print(f'O resultado da multiplicaçao é: {resultado}')
+
+    resultado = dividir(9, 3)
+    print(f'O resultado da divisao é: {resultado}')
+
+
+
+
 
 
 
