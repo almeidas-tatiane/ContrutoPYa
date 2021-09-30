@@ -31,17 +31,17 @@ def dividir(numero1, numero2):
 def dividir_try_except(numero1,numero2):
     try:
         return numero1 / numero2
-    except TypeError:
-        # return 'Não dividirás por zero'
-        if TypeError == ZeroDivisionError:
+    except:
             return 'Não dividirás por zero'
-        elif TypeError == ArithmeticError:
-            return 'Erro no cálculo'
-        elif TypeError == ValueError:
-            return 'Erro no valor'
-        else:
-            return 'Erro desconhecido'
-        pass
+        # if TypeError ##== ZeroDivisionError:
+        #     return 'Não dividirás por zero'
+        # elif TypeError == ArithmeticError:
+        #     return 'Erro no cálculo'
+        # elif TypeError == ValueError:
+        #     return 'Erro no valor'
+        # else:
+        #     return 'Erro desconhecido'
+        # pass
 
 
 
