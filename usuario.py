@@ -68,7 +68,7 @@ def ler_dados_do_csv():
 
 
 @pytest.mark.parametrize('id, nome, sobrenome, email', ler_dados_do_csv())
-def testar_dados_usuarios(id, nome, sobrenome, email):  #função que testa o que vai ser feito
+def testar_dados_usuarios_csv(id, nome, sobrenome, email):  #função que testa o que vai ser feito
     try:
         response = requests.get(f'https://reqres.in/api/users/{id}')
         jsonResponse = response.json()
