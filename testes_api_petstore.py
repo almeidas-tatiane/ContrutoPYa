@@ -72,16 +72,28 @@ def testar_atualizar_usuario():
     resposta = requests.put(f'{url}/{username}',
                             data=open('json/usuario2.json', 'rb'), headers=headers)
 
+    resposta_get = requests.get(f'{url}/{username}', headers=headers)
+
     corpo_da_resposta = resposta.json()
     print(resposta)
     print(resposta.status_code)
     print(resposta.json())
+
+    corpo_da_resposta_get = resposta.json()
+    print(resposta_get)
+    print(resposta_get.status_code)
+    print(resposta_get.json())
 
     #Valida
     assert resposta.status_code == status_code_esperado
     assert corpo_da_resposta['code'] == codigo_esperado
     assert corpo_da_resposta['type'] == tipo_esperado
     assert corpo_da_resposta['message'] == messagem_esperada
+
+    assert resposta.status_code == status_code_esperado
+    assert corpo_da_resposta_get['code'] == codigo_esperado
+    assert corpo_da_resposta_get['type'] == tipo_esperado
+    assert corpo_da_resposta_get['message'] == messagem_esperada
 
 def testar_deletar_usuario():
     #Configura
@@ -96,16 +108,28 @@ def testar_deletar_usuario():
     #Executa
     resposta = requests.delete(f'{url}/{username}', headers=headers)
 
+    resposta_get = requests.get(f'{url}/{username}', headers=headers)
+
     corpo_da_resposta = resposta.json()
     print(resposta)
     print(resposta.status_code)
     print(resposta.json())
+
+    corpo_da_resposta_get = resposta.json()
+    print(resposta_get)
+    print(resposta_get.status_code)
+    print(resposta_get.json())
 
     # Valida
     assert resposta.status_code == status_code_esperado
     assert corpo_da_resposta['code'] == codigo_esperado
     assert corpo_da_resposta['type'] == tipo_esperado
     assert corpo_da_resposta['message'] == messagem_esperada
+
+    assert resposta.status_code == status_code_esperado
+    assert corpo_da_resposta_get['code'] == codigo_esperado
+    assert corpo_da_resposta_get['type'] == tipo_esperado
+    assert corpo_da_resposta_get['message'] == messagem_esperada
 
 
 
